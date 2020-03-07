@@ -1,3 +1,5 @@
+[toc]
+
 ## 页面渲染过程解析
 
 原文链接：https://segmentfault.com/a/1190000015019450
@@ -129,7 +131,11 @@
 
 JavaScript阻止DOM构建（DOMContentLoaded触发被延迟），css的下载和完成阻止javascript的执行。在没有JavaScript或者只含有异步JavaScript的页面，DOM的构建和CSSOM的构建互不影响。
 
-# 前端性能优化知识点汇总
+
+
+
+
+## 前端性能优化知识点汇总
 
 原文链接： https://segmentfault.com/a/1190000013363147
 
@@ -180,3 +186,22 @@ JavaScript阻止DOM构建（DOMContentLoaded触发被延迟），css的下载和
 [DNS预解析](https://developer.mozilla.org/zh-CN/docs/Controlling_DNS_prefetching)
 [google规范](https://google.github.io/styleguide/jsguide.html#guide-notes)
 
+
+
+## 回流
+
+什么是回流？ 回流也叫重排（reflow），当页面中的元素**发生影响布局的变化**，比如：改变宽高，修改显示影藏。页面需要重新布局，就会触发重排。 简单的说就是，页面布局改变，就会触发重排。
+
+
+
+## 重绘
+
+什么是重绘（repaint）？ 页面中的元素**样式发生改变**，比如：背景颜色，背景图片，字体颜色的样式改变。 只要页面需要重新渲染，就会触发重绘。
+
+
+
+## 注意
+
+1. 每个页面只要会发生一次 重排和重绘
+
+2. 重排一定会触发重绘
